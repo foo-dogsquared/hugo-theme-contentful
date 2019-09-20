@@ -1,0 +1,19 @@
+# Pagination
+[first_page]
+other = "First page"
+
+[prev_page]
+other = "Previous page"
+
+[next_page]
+other = "Next page"
+
+[last_page]
+other = "Last page"
+
+# General 
+[back_to_home]
+other = "Back to home"
+
+[available_translations]
+other = "Available translations"

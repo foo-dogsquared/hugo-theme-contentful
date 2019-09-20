@@ -1,0 +1,20 @@
+{{ define "main" }}
+<main>
+<h1 class="post-title">{{ .Title }}</h1>
+{{ with .Params.author }}<p>{{ . }}</p>{{ end }}
+<date datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</date>
+{{ if .IsTranslated }}
+<div>
+{{ i18n "available_translations" }}: 
+{{ range .Translations }}
+<a href="{{ .Permalink }}">{{ .Lang }}</a>
+{{ end }}
+</div>
+{{ end }}
+<hr>
+
+<article>
+{{ .Content }}
+</article>
+</main>
+{{ end }}

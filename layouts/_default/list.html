@@ -1,0 +1,33 @@
+{{ define "main" }}
+{{ .Content }}
+<hr>
+
+{{ $pages := .Pages }}
+{{ if .IsHome }}
+{{ $pages = where $.Site.RegularPages "Type" "in" $.Site.Params.mainSections }}
+{{ end }}
+{{ range (.Paginate $pages).Pages }}
+<article class="post">
+    <a href="{{ .Permalink }}"><h1>{{ .Title }}</h1></a>
+    <date datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</date>
+</article>
+{{ end }}
+<div class="pagination">
+
+{{ if .Paginator.HasPrev }}
+{{ if ne .Paginator.First .Paginator.Prev }}
+<a rel="first" href="{{ .Paginator.First.URL }}">{{ i18n "first_page" }}</a>
+{{ end }}
+
+<a rel="prev" href="{{ .Paginator.Prev.URL }}">{{ i18n "prev_page" }}</a>
+{{ end }}
+
+{{ if .Paginator.HasNext }}
+<a rel="next" href="{{ .Paginator.Next.URL }}">{{ i18n "next_page" }}</a>
+
+{{ if ne .Paginator.Last .Paginator.Next }}
+<a rel="last" href="{{ .Paginator.Last.URL }}">{{ i18n "last_page" }}</a>
+{{ end }}
+{{ end }}
+</div>
+{{ end }}

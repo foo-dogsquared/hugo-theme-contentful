@@ -1,0 +1,5 @@
+<hr>
+<footer>
+<p><a href="{{ $.Site.BaseURL }}">{{ i18n "back_to_home" }}</a></p>
+</footer>
+<p>{{ with $.Site.Copyright }}{{ . | markdownify }}{{ else }}© {{ now.Year }} {{ with $.Site.Author.name }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}{{ end }}</p>

@@ -1,0 +1,10 @@
+{{ if not .IsPage }}
+<header>
+    <h1>{{ $.Site.Title }}</h1>
+    <nav>
+        {{ range $.Site.Menus.main -}}
+        <a href="{{ .URL | absURL }}">{{ .Name }}</a>
+        {{ end }}
+    </nav> 
+</header>
+{{ end }}

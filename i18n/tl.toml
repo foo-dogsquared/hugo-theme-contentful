@@ -1,0 +1,19 @@
+# Pagination
+[first_page]
+other = "Unang pahina"
+
+[prev_page]
+other = "Balik"
+
+[next_page]
+other = "Sunod"
+
+[last_page]
+other = "Huling pahina"
+
+# General
+[back_to_home]
+other = "Balik sa homepage"
+
+[available_translations]
+other = "Mga pagsasalin"
