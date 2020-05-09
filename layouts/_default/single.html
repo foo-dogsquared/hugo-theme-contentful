@@ -1,20 +1,44 @@
 {{ define "main" }}
-<main>
-<h1 class="post-title">{{ .Title }}</h1>
-{{ with .Params.author }}<p>{{ . }}</p>{{ end }}
-<date datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</date>
-{{ if .IsTranslated }}
-<div>
-{{ i18n "available_translations" }}: 
-{{ range .Translations }}
-<a href="{{ .Permalink }}">{{ .Lang }}</a>
-{{ end }}
-</div>
-{{ end }}
+
+<header>
+    <h1>{{ .Title }}</h1>
+
+    <div class="post__meta">
+        <!-- List the author(s) of the article. -->
+        {{- with .Params.author }}
+        <p class="author">{{ i18n "published_by" }}: {{ range . }}{{ . }}; {{ end }}</p>
+        {{- end }}
+
+        <!-- Publication date. -->
+        <p class="created-date">{{ i18n "published_on" }}: <date datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</date></p>
+
+        <!-- Modification date (will only appear if the publication date is less than the modified date.) -->
+        {{- if ne .Date .Lastmod }}
+        <p class="updated-date">{{ i18n "updated_on" }}: <date datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</date></p>
+        {{- end }}
+
+        <!-- Link the translated versions if the article has at least one translated page. -->
+        {{- if .IsTranslated }}
+        <p>
+        {{- i18n "available_translations" }}: 
+        {{ range .Translations }}
+        <a href="{{ .Permalink }}">{{ with .Language.LanguageName }}{{ . }}{{ else }}{{ .Lang }}{{ end }}</a>
+        {{- end }}
+        </p>
+        {{- end }}
+    </div>
+</header>
+
 <hr>
 
+{{ $is_toc := cond (ne .Params.toc nil) .Params.toc $.Site.Params.toc }}
+{{ if $is_toc }}
+{{ .TableOfContents }}
+{{ end }}
+
+<!-- The article content. -->
 <article>
 {{ .Content }}
 </article>
-</main>
+
 {{ end }}

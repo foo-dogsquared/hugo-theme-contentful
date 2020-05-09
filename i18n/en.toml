@@ -1,19 +1,37 @@
 # Pagination
 [first_page]
-other = "First page"
+other = "Newest posts"
 
 [prev_page]
-other = "Previous page"
+other = "Newer posts"
 
 [next_page]
-other = "Next page"
+other = "Older posts"
 
 [last_page]
-other = "Last page"
+other = "Oldest posts"
+
+
+# Content
+[published_by]
+other = "Authors"
+
+[published_on]
+other = "Created"
+
+[updated_on]
+other = "Updated"
+
+[available_translations]
+other = "Translations"
+
 
 # General 
 [back_to_home]
 other = "Back to home"
 
-[available_translations]
-other = "Available translations"
+[multilingual]
+other = "Available in other languages"
+
+[theme_toggle]
+other = "Toggle theme"

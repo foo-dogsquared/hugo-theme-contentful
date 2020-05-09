@@ -1,5 +1,17 @@
 <hr>
 <footer>
+<!-- A convenient back to home. -->
 <p><a href="{{ $.Site.BaseURL }}">{{ i18n "back_to_home" }}</a></p>
 </footer>
+
+<!-- Linking to other languages' homepage. -->
+{{ if $.Site.IsMultiLingual }}
+<p>{{ i18n "multilingual" }}:
+{{ range $.Site.Languages }}
+<a href="{{ . | relURL }}">{{ with .LanguageName }}{{ . }}{{ else }}{{ .Lang }}{{ end }}</a>
+{{ end }}
+</p>
+{{ end }}
+
+<!-- Copyright info. -->
 <p>{{ with $.Site.Copyright }}{{ . | markdownify }}{{ else }}© {{ now.Year }} {{ with $.Site.Author.name }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}{{ end }}</p>

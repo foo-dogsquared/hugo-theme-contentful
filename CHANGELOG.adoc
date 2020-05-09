@@ -4,7 +4,42 @@ All notable changes to this project will be documented in this file.
 The format is based on https://keepachangelog.com/en/1.0.0/[Keep a Changelog],
 and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Versioning].
 
+
+
+== [Unreleased]
+
+
+
+
+== [1.1.0] - 2020-05-09
+
+
+=== Added
+
+* Create a theme toggle.
+It also [detects with CSS if the user prefers a dark scheme](https://css-tricks.com/dark-modes-with-css/).
+
+* Add a modified date (although requires `.GitInfo` to work which requires a Git-enabled repository).
+
+* Add `toc` to as site and page configuration.
+The page config has more priority and can override the site config.
+
+
+=== Changed
+
+* Update the site to conform with accessibility features.
+** Add a `aria-label` for list entries.
+** Make the theme screen-reader-friendly with the correct use of [content semantic tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
+** Revise the color of the links.
+** Use viewport units for dynamic font sizes.
+
+* Improve the vertical rhythm of the site.
+
+
+
+
 == [1.0.0] - 2019-09-21 
+
 
 === Added
 * Create the base layout.

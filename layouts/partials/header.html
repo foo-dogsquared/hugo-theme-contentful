@@ -1,10 +1,10 @@
-{{ if not .IsPage }}
-<header>
-    <h1>{{ $.Site.Title }}</h1>
-    <nav>
+<nav aria-labelledby="primary-navigation">
+    <a class="site__title" href="{{ $.Site.BaseURL }}">{{ $.Site.Title }}</a>
+    <div class="site__links">
+        |
         {{ range $.Site.Menus.main -}}
-        <a href="{{ .URL | absURL }}">{{ .Name }}</a>
+        <a href="{{ .URL | absURL }}">{{ .Name }}</a> |
         {{ end }}
-    </nav> 
-</header>
-{{ end }}
+    </div>
+    <button class="site__theme-btn" aria-label="theme-toggle" onclick="const theme = window.localStorage.getItem('theme') == 'dark' ? 'light' : 'dark'; window.localStorage.setItem('theme', theme); document.documentElement.dataset.theme = theme">{{ i18n "theme_toggle" }}</button>
+</nav>
