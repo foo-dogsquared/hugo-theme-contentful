@@ -1,27 +1,58 @@
+{{- /*
+The reference used to create this template is at https://cyber.harvard.edu/rss/rss.html.
+The template does miss out on certain things which I put it on a list for those who are interested:
+   * Since there's no standard for multiple authors (with <author>) in the <item> element, I decided it would be best to leave it out for now.
+   * The name was left out for certain elements that requires an email address (like <managingEditor>, <webMaster>, or <author> in the <item>.
+   * <item:guid> is a permalink to the HTML post.
+   * No <item:enclosure>.
+   * <item:description> contains the whole post; if you want to change it to <item:content:encoded> and make <item:description> a summarized version, refer to https://www.rssboard.org/rss-profile and change the description tag with `.Summary | safeHTML`.
+*/ -}}
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
     <link>{{ .Permalink }}</link>
     <description>Recent content {{ if ne  .Title  .Site.Title }}{{ with .Title }}in {{.}} {{ end }}{{ end }}on {{ .Site.Title }}</description>
-    <generator>Hugo -- gohugo.io</generator>{{ with .Site.LanguageCode }}
-    <language>{{.}}</language>{{end}}{{ with .Site.Author.email }}
-    <managingEditor>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</managingEditor>{{end}}{{ with .Site.Author.email }}
-    <webMaster>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</webMaster>{{end}}
-    <copyright>{{ with .Site.Copyright }}{{ . }}{{ else }}© {{ now.Year }} {{ $.Site.Author.name }}{{ end }}</copyright>{{ if not .Date.IsZero }}
-    <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+    <generator>Hugo -- gohugo.io</generator>
+
+    {{ with .Site.LanguageCode }}
+    <language>{{.}}</language>
+    {{end}}
+
+    {{ with .Site.Author.email }}
+    <managingEditor>{{.}}</managingEditor>
+    <webMaster>{{.}}</webMaster>
+    {{end}}
+
+    <copyright>{{ with .Site.Copyright }}{{ . }}{{ else }}© {{ now.Year }} to the author(s) behind {{ .Site.Title }}{{ end }}</copyright>
+
+    {{ if not .Date.IsZero }}
+    <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{ end }}
+
     <docs>https://cyber.harvard.edu/rss/rss.html</docs>
+
     {{ with .OutputFormats.Get "RSS" }}
         {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{ end }}
+
+    {{- /* Point the alternative output formats. */ -}}
+    {{ range .AlternativeOutputFormats }}
+        {{ printf "<atom:link href=%q rel=%q type=%q />" .Permalink .Rel .MediaType | safeHTML }}
+    {{ end }}
+
+    {{- /* Iterate each valid regular page. */ -}}
     {{ $limit := cond (gt .Site.Params.feedLimit 0) .Site.Params.feedLimit 10 }}
-    {{ range first $limit (where .RegularPages "File.Dir" "!=" "/") }}
+    {{ range first $limit (where .Site.RegularPages ".Params.date" "!=" nil) }}
     <item>
       <title>{{ .Title }}</title>
-      <link>{{ .Permalink }}</link>{{ range .Params.tags }}
-      <category>{{ . }}</category>{{ end }}
+      <link>{{ .Permalink }}</link>
+
+      {{ range .Params.tags }}
+      <category>{{ . }}</category>
+      {{ end }}
+
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-      {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
       <description>{{ .Content | html }}</description>
     </item>

@@ -27,6 +27,9 @@ other = "Translations"
 
 
 # General 
+[and]
+other = "And"
+
 [back_to_home]
 other = "Back to home"
 

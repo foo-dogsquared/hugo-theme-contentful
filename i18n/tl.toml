@@ -27,6 +27,9 @@ other = "Mga pagsasalin"
 
 
 # General
+[and]
+other = "At"
+
 [back_to_home]
 other = "Balik sa homepage"
 

@@ -1,16 +1,24 @@
-html:root {
-    --foreground: #000000;
-    --foreground-light: #363537;
+:root {
+    /* The color palette. */
     --background: #ffffff;
     --background-light: #E6E6E6;
+    --foreground: #000000;
+    --foreground-light: #363537;
     --grey: #454545;
-    --fontFamily: serif;
-    --fontSize: 1.7vw;
-    --verticalRhythm: 24px;
-    --contentWidth: 900px;
+
+    /* The fonts. */
+    --body-family: serif;
+    --header-family: sans-serif;
+
+    /* Spacing options. */
+    --font-size: 1.7vw;
+    --vertical-rhythm: 24px;
+    --content-width: 900px;
+
+    --border-style: var(--foreground) solid 1px;
 }
 
-html[data-theme="dark"]:root {
+[data-theme="dark"]:root {
     --foreground: #FFFFFF;
     --foreground-light: #E6E6E6;
     --background: #000000;
@@ -18,7 +26,8 @@ html[data-theme="dark"]:root {
     --grey: #919191;
 }
 
-html {
+:root {
+    font-size: var(--font-size);
     margin: 0;
     padding: 0;
 }
@@ -28,31 +37,31 @@ html {
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: var(--fontFamily);
-    font-size: var(--fontSize);
-    line-height: var(--verticalRhythm);
+    font-family: var(--body-family);
+    font-size: var(--font-size);
+    line-height: var(--vertical-rhythm);
     margin: 0 auto;
-    max-width: var(--contentWidth);
+    max-width: var(--content-width);
     padding: 1rem;
 }
 
 nav {
-    margin: var(--verticalRhythm) auto;
+    margin: 1rem auto;
 }
 
 article h2 {
-    margin-top: calc(var(--verticalRhythm) * 3);
+    margin-top: 3rem;
 }
 
 article h3 {
-    margin-top: calc(var(--verticalRhythm) * 2);
+    margin-top: 2rem;
 }
 
 
 /* Text formatting */
 h1, h2, h3,
 h4, h5, h6 {
-    font-family: sans-serif;
+    font-family: var(--header-family);
     line-height: 1.25;
 }
 
@@ -69,19 +78,8 @@ dd, li, p, td {
 }
 
 dd, p {
-    margin-top: var(--verticalRhythm);
-    margin-bottom: var(--verticalRhythm);
-}
-
-table, thead, tbody {
-    border: var(--foreground) solid 1px;
-    margin: 0 auto;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: var(--foreground) solid 1px;
-    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 tr:nth-child(even) {
@@ -91,10 +89,11 @@ tr:nth-child(even) {
 pre {
     background: var(--background-light);
     border: var(--background) solid 1px;
+    font-size: 1rem;
     line-height: 1.5;
-    margin-top: var(--verticalRhythm);
-    margin-bottom: var(--verticalRhythm);
-    padding: calc(var(--verticalRhythm) / 2);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
     overflow: auto;
 }
 
@@ -103,40 +102,63 @@ aside {
     color: var(--grey);
     border: 1px solid var(--grey);
     border-left: 3px solid var(--grey);
-    font-size: calc(var(--fontSize) * (1 - var(--vertical-rhythm-reduction)));
-    line-height: calc(var(--verticalRhythm) * (1 + var(--vertical-rhythm-reduction)));
-    margin: var(--verticalRhythm) 0;
-    padding: calc(var(--verticalRhythm) / 2);
+    font-size: calc(1rem * (1 - var(--vertical-rhythm-reduction)));
+    line-height: calc(1rem * (1 + var(--vertical-rhythm-reduction)));
+    margin: 1rem 0;
+    padding: 0.5rem;
     width: 100%;
 }
 
 
 /* Multimedia blocks */
 img, video, audio, iframe {
-    width: 100%;
+    display: block;
     height: auto;
+    max-width: 100%;
+    margin: auto;
+}
+
+table {
+    border: var(--border-style);
+    border-collapse: collapse;
+    margin: auto;
+}
+
+thead, tbody {
+    margin: 0 auto;
+}
+
+th, td {
+    border: var(--border-style);
+    padding: 1rem;
+}
+
+ol, ul {
+    line-height: 1.5;
 }
 
 figure {
-    margin-bottom: calc(var(--verticalRhythm) * 2);
+    margin: 2rem auto;
+}
+
+figure > * {
+    margin: 1rem auto;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 1rem;
 }
 
 svg {
-    --size: var(--fontSize);
+    --size: var(--font-size);
     height: var(--size);
     width: var(--size);
     fill: currentColor;
 }
 
-footer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-flow: column nowrap;
-}
-
 blockquote {
-    width: 100%;
+    margin: 2rem 1rem;
 }
 
 blockquote footer {
@@ -146,12 +168,21 @@ blockquote footer {
 }
 
 
+/* Semantic blocks */
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+
 /* Layout styles. */
 .site__title {
     display: inline-block;
-    font-size: calc(var(--fontSize) * 2);
-    margin-bottom: var(--verticalRhythm);
-    margin-right: calc(var(--verticalRhythm) / 2);
+    font-size: calc(var(--font-size) * 2);
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
 }
 
 .site__links {
@@ -163,7 +194,7 @@ blockquote footer {
     border: var(--foreground) solid 1px;
     color: var(--foreground);
     cursor: pointer;
-    padding: calc(var(--verticalRhythm) / 2);
+    padding: 0.5rem;
     position: absolute;
     right: 0;
     top: 0;
@@ -174,14 +205,14 @@ blockquote footer {
     display: flex;
     justify-content: space-evenly;
     padding: 0;
-    margin: var(--verticalRhythm);
+    margin: 1rem;
 }
 
 .post {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin-top: var(--verticalRhythm);
+    margin-top: 1rem;
 }
 
 .post h1 {
@@ -189,7 +220,7 @@ blockquote footer {
 }
 
 .post__meta > * {
-    margin: calc(var(--verticalRhythm) / 2) auto;
+    margin: 0.5rem auto;
 }
 
 .icon {
@@ -203,18 +234,19 @@ blockquote footer {
 /* Mobile styles */
 @media (max-width: 860px) {
     html:root {
-        --fontSize: 18px;
+        --font-size: 18px;
     }
 
     .post {
         align-items: unset;
         flex-flow: column;
-        margin-bottom: var(--verticalRhythm);
+        margin-bottom: 1rem;
     }
 }
 
 @media all and (min-width: 1000px) {
     html:root {
-        --fontSize: 24px;
+        --font-size: 20px;
     }
 }
+

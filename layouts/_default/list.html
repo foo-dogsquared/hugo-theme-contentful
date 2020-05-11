@@ -12,22 +12,22 @@
     <date datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</date>
 </article>
 {{ end }}
+
 <div class="pagination">
+    {{- if .Paginator.HasPrev }}
+    {{- if ne .Paginator.First .Paginator.Prev -}}
+        <a rel="first" href="{{ .Paginator.First.URL }}">{{ i18n "first_page" }}</a>
+    {{- end }}
 
-{{ if .Paginator.HasPrev }}
-{{ if ne .Paginator.First .Paginator.Prev }}
-<a rel="first" href="{{ .Paginator.First.URL }}">{{ i18n "first_page" }}</a>
-{{ end }}
+        <a rel="prev" href="{{ .Paginator.Prev.URL }}">{{ i18n "prev_page" }}</a>
+    {{- end }}
 
-<a rel="prev" href="{{ .Paginator.Prev.URL }}">{{ i18n "prev_page" }}</a>
-{{ end }}
+    {{- if .Paginator.HasNext -}}
+        <a rel="next" href="{{ .Paginator.Next.URL }}">{{ i18n "next_page" }}</a>
 
-{{ if .Paginator.HasNext }}
-<a rel="next" href="{{ .Paginator.Next.URL }}">{{ i18n "next_page" }}</a>
-
-{{ if ne .Paginator.Last .Paginator.Next }}
-<a rel="last" href="{{ .Paginator.Last.URL }}">{{ i18n "last_page" }}</a>
-{{ end }}
-{{ end }}
+    {{- if ne .Paginator.Last .Paginator.Next -}}
+        <a rel="last" href="{{ .Paginator.Last.URL }}">{{ i18n "last_page" }}</a>
+    {{- end }}
+    {{- end }}
 </div>
 {{ end }}

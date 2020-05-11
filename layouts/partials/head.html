@@ -1,14 +1,26 @@
+<title>{{ if .IsHome }}{{ $.Site.Title | safeHTML }}{{ else }}{{ .Title | safeHTML }}{{ end }}</title>
+<link rel="stylesheet" href="{{ "css/main.css" | absURL }}" />
+
+{{- /* Some sane <meta> tags default */ -}}
+{{ hugo.Generator }}
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }}{{ end }}</title>
-<link rel="stylesheet" href="{{"css/main.css" | absURL }}" />
+<meta name="author" content="{{ .Param "author.name" }}" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="referrer" content="no-referrer" />
+<meta name="description" content="{{ if (and (eq .Kind "home") .IsHome) }}{{ .Site.Title }}{{ else }}{{ .Summary | safeHTML }}{{ end }}" />
+
+
+{{- /* Linking all of the output formats for discovery. */ -}}
+{{ range .OutputFormats }}
+{{ printf "<link rel=%q type=%q href=%q />" .Rel .MediaType.Type .Permalink | safeHTML }}
+{{ end }}
+
+
+{{- /* Persistent theme.
+It's a very small script so there's little effect on perceived performance. */ -}}
 <script>
     const theme = window.localStorage.getItem('theme'); 
     if (theme) {
         document.documentElement.dataset.theme = theme;
     }
 </script>
-
-<!-- MathJax -->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
