@@ -1,12 +1,12 @@
 {{ define "main" }}
-{{ .Content }}
 <hr>
+{{ .Content }}
 
 {{ $pages := .Pages }}
 {{ if .IsHome }}
 {{ $pages = where $.Site.RegularPages "Type" "in" $.Site.Params.mainSections }}
 {{ end }}
-{{ range (.Paginate $pages).Pages }}
+{{ range (where (.Paginate $pages).Pages "Params.hidden" "!=" true) }}
 <article class="post">
     <a href="{{ .Permalink }}" aria-label="{{ .Title }}"><h1>{{ .Title }}</h1></a>
     <date datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</date>

@@ -7,10 +7,11 @@
 <!-- Linking to other languages' homepage. -->
 {{ if $.Site.IsMultiLingual }}
 <p>{{ i18n "multilingual" }}:
-|
+<span class="site__languages">|
 {{ range $.Site.Languages }}
 <a href="{{ . | relURL }}">{{ with .LanguageName }}{{ . }}{{ else }}{{ .Lang }}{{ end }}</a> |
 {{ end }}
+</span>
 </p>
 {{ end }}
 

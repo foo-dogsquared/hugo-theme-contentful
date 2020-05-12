@@ -4,16 +4,24 @@
 {{- /* Some sane <meta> tags default */ -}}
 {{ hugo.Generator }}
 <meta charset="utf-8">
-<meta name="author" content="{{ .Param "author.name" }}" />
+<meta name="author" content="{{ with .Param "author.name" }}{{ . }}{{ else }}{{ $.Site.Author.name }}{{ end }}" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="referrer" content="no-referrer" />
 <meta name="description" content="{{ if (and (eq .Kind "home") .IsHome) }}{{ .Site.Title }}{{ else }}{{ .Summary | safeHTML }}{{ end }}" />
+{{- template "_internal/twitter_cards.html" . -}}
+{{- template "_internal/opengraph.html" . -}}
 
 
 {{- /* Linking all of the output formats for discovery. */ -}}
-{{ range .OutputFormats }}
-{{ printf "<link rel=%q type=%q href=%q />" .Rel .MediaType.Type .Permalink | safeHTML }}
-{{ end }}
+{{- range .OutputFormats }}
+{{- printf "<link rel=%q type=%q href=%q />" .Rel .MediaType.Type .Permalink | safeHTML }}
+{{- end }}
+
+
+{{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+    {{ template "_internal/google_analytics_async.html" . }}
+    {{ template "_internal/disqus.html" . }}
+{{- end }}
 
 
 {{- /* Persistent theme.

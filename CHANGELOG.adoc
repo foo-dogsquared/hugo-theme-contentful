@@ -3,10 +3,35 @@ All notable changes to this project will be documented in this file.
 
 The format is based on https://keepachangelog.com/en/1.0.0/[Keep a Changelog],
 and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Versioning].
+(Big disclaimer)
 
 
 
 == [Unreleased]
+
+
+
+
+== [1.1.1] - 2020-05-12
+
+=== Added
+
+* Create a dedicated section for recipes of features in the documentation.
+
+* Add some appropriate `<meta>` tags.
+
+* Add https://dev.twitter.com/cards[Twitter cards] https://opengraphprotocol.org/[Open Graph protocol] with Hugo's internal templates.
+
+* Add `hidden` as a frontmatter option in the page.
+This will exclude the page from list templates including the homepage and the theme's web feeds.
+
+
+=== Changed
+
+* Tweak the appearance of the site a little bit.
+The CSS is also improved especially with relative units for consistent margin and padding.
+
+* Improve the web feeds template.
 
 
 

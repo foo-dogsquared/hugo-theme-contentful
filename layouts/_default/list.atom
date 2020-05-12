@@ -20,7 +20,11 @@
 
   {{- /* Generate each valid regular pages (with  as an individual entry in the feed. */ -}}
   {{ $limit := cond (gt .Site.Params.feedLimit 0) .Site.Params.feedLimit 10 }}
-  {{ range first $limit (where .Site.RegularPages ".Params.date" "!=" nil) }}
+{{ $pages := .Pages }}
+{{ if .IsHome }}
+{{ $pages = where $.Site.RegularPages "Type" "in" $.Site.Params.mainSections }}
+{{ end }}
+{{ range first $limit (where $pages "Params.hidden" "!=" true) }}
   <entry>
     <id>{{ .Permalink }}</id>
     <title type="text">{{ .Title }}</title>

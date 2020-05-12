@@ -43,7 +43,11 @@ The template does miss out on certain things which I put it on a list for those 
 
     {{- /* Iterate each valid regular page. */ -}}
     {{ $limit := cond (gt .Site.Params.feedLimit 0) .Site.Params.feedLimit 10 }}
-    {{ range first $limit (where .Site.RegularPages ".Params.date" "!=" nil) }}
+    {{ $pages := .Pages }}
+    {{ if .IsHome }}
+    {{ $pages = where $.Site.RegularPages "Type" "in" $.Site.Params.mainSections }}
+    {{ end }}
+    {{ range first $limit (where $pages "Params.hidden" "!=" true) }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
