@@ -1,0 +1,79 @@
+---
+title: "RSS, Atom, and JSON Feed Support"
+date: 2019-09-04T17:22:44+08:00
+author: [ { name: "John Doe" }, { name: "Jane Doe" } ]
+aliases:
+    - "/feeds/"
+categories:
+    - "guide"
+tags:
+    - "this is a test tag"
+    - "tag2"
+---
+
+= RSS, Atom, and JSON Feed Support
+John Dodo <johndodo@example.com>
+2019-09-04
+:stem: latexmath
+
+
+This theme supports RSS, Atom, and JSON feed output for more ways of publishing web content for your visitors.
+It is also suitable for reading content from feed readers.
+
+Here are the following documents used as references for the creation of the output feed templates.
+
+* https://tools.ietf.org/html/rfc4287[Atom 1.0 - IETF RFC4287]
+* https://jsonfeed.org/version/1[JSON Feed version 1 specifications]
+* https://cyber.harvard.edu/rss/rss.html[RSS 2.0 specifications]
+
+In this demo, it is enabled and you should be able to see them through the following links:
+
+* **RSS**: `$HUGO_URL/index.rss`
+* **Atom**: `$HUGO_URL/index.atom`
+* **JSON**: `$HUGO_URL/index.json`
+
+For enabling output feeds, utilize the https://gohugo.io/templates/output-formats[output formats] in your site configuration.
+
+If you're settling with this option, here's an example template for enabling all of the feed formats.
+
+[source,toml]
+----
+# Visit the following for more information:
+# https://gohugo.io/templates/output-formats
+
+# Defining the media type of the output formats
+# For JSON format, it doesn't need to be since it's already built-in into Hugo
+[mediaTypes]
+    [mediaTypes."application/atom+xml"]
+        suffixes = ["atom", "atom.xml"] # You can remove the "atom.xml" if you want
+
+    # Redefining RSS media type for the additional suffix
+    [mediaTypes."application/rss+xml"]
+        suffixes = ["rss", "rss.xml"] # You can remove the "rss.xml" if you want
+
+
+
+# Including all of the feed output formats in the build
+[outputFormats]
+    [outputFormats.Rss]
+        mediaType = "application/rss+xml"
+        baseName = "feed"
+
+    [outputFormats.Atom]
+        mediaType = "application/atom+xml"
+        baseName = "feed"
+
+    [outputFormats.Json]
+        mediaType = "application/json"
+        baseName = "feed"
+
+
+# Indicating what output formats shall be included
+# for the following kinds
+[outputs]
+    # .Site.BaseURL/index.* is available
+    home = ["HTML", "JSON", "RSS", "ATOM"]
+
+    # .Site.BaseURL/$section/index.* is available
+    section = ["HTML", "JSON", "RSS", "ATOM"]
+----

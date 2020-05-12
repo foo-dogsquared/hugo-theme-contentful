@@ -1,0 +1,26 @@
+dist: bionic
+language: generic
+
+branches:
+  only:
+    - demo
+    - master
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install python3
+  - sudo apt-get install ruby wget
+  - curl https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "hugo_extended.*deb" | grep "browser_download_url" | cut --delimiter=":" --delimiter="\"" --fields=4 | sudo wget -i -
+  - sudo dpkg -i *.deb
+  - sudo gem install asciidoctor
+  - git clone https://github.com/foo-dogsquared/hugo-theme-contentful themes/contentful
+script:
+  - hugo
+deploy:
+  local_dir: "./public/"
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  target_branch: gh-pages
+  on:
+    branch: demo
