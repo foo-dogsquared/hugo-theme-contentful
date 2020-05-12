@@ -28,7 +28,7 @@ other = "Translations"
 
 # General 
 [and]
-other = "And"
+other = "and"
 
 [back_to_home]
 other = "Back to home"

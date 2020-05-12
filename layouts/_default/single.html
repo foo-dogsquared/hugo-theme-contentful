@@ -8,7 +8,7 @@
         {{- with .Params.author }}
         {{- $names := slice }}
         {{- range . }}{{ $names = $names | append .name }}{{ end }}
-        <p class="author">{{ i18n "published_by" }}: {{ delimit $names ", " ", and " }}</p>
+        <p class="author">{{ i18n "published_by" }}: {{ delimit $names ", " (printf ", %s " (i18n "and")) }}</p>
         {{- end }}
 
         <!-- Only show the creation date if the `date` field is valid. -->

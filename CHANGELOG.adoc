@@ -10,9 +10,15 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 == [Unreleased]
 
 
+=== Changed
+
+* Fix relative links for multilingual mode.
 
 
-== [1.1.1] - 2020-05-12
+
+
+== [1.2.0] - 2020-05-12
+
 
 === Added
 
@@ -67,6 +73,7 @@ The page config has more priority and can override the site config.
 
 
 === Added
+
 * Create the base layout.
 * Add the Asciidoctor content template.
 * Create the template for RSS, Atom, and JSON web syndication feeds.

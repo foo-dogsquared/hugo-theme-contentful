@@ -14,6 +14,8 @@ The template does miss out on certain things which I put it on a list for those 
     <link>{{ .Permalink }}</link>
     <description>Recent content {{ if ne  .Title  .Site.Title }}{{ with .Title }}in {{.}} {{ end }}{{ end }}on {{ .Site.Title }}</description>
     <generator>Hugo -- gohugo.io</generator>
+    {{- /* ICON, AHOY! */ -}}
+    <image>{{ "icon.png" | absURL }}</image>
 
     {{ with .Site.LanguageCode }}
     <language>{{.}}</language>

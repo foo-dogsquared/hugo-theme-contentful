@@ -15,6 +15,15 @@ All it needs is the `title` field from your site config.
 
 
 
+
+## Demo
+
+There's a demo available at the `demo` branch with the live version at https://foo-dogsquared.github.io/hugo-theme-contentful/.
+It features a multilingual site with the default settings.
+
+
+
+
 ## Feature list
 
 The quickest way to describe Contentful in one go is a list.
@@ -169,7 +178,12 @@ It could be handy for guest posts and co-authored papers with others.
 You can have web syndication formats like RSS and Atom by setting [custom output formats](https://gohugo.io/templates/output-formats) to your site configurations.
 The theme mainly supports output feeds for the homepage and site sections.
 
-I should point out that the web feeds prints the whole and links.
+I should point out that the web feeds prints the whole content instead of summaries.
+
+Also, they all rely on an icon to be placed in `icon.png`.
+For more accurate control regarding the icon paths, you can copy the templates (at `theme/contentful/layouts/_default/list.{rss,atom,json}`) to your own layout folder.
+I've conveniently placed some key phrases to easily find them.
+Just search for the phrase `ICON, AHOY!` and the icon is usually below it then make your desired changes.
 
 Here is an example configuration on enabling all of them.
 

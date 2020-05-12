@@ -76,9 +76,14 @@ dd, li, p, td {
     line-height: 1.5;
 }
 
-dd, p {
+p {
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+dd{
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 kbd {

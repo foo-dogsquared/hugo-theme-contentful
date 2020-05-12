@@ -1,11 +1,13 @@
 {
     "version": "https://jsonfeed.org/version/1",
     "title": "{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}",
-    "home_page_url": "{{ .Site.BaseURL }}",
+    "home_page_url": "{{ "" | absLangURL }}",
     "feed_url": "{{ with .OutputFormats.Get "json" }}{{ .Permalink }}{{ end }}",
     "description": "Recent content {{ if ne  .Title  .Site.Title }}{{ with .Title }}in {{.}} {{ end }}{{ end }}on {{ .Site.Title }}", 
-    "favicon": "{{ "assets/icon.png" | absURL }}", 
-    "icon": "{{ "assets/icon.png" | absURL }}", 
+    {{- /* ICON, AHOY! */ -}}
+    "favicon": "{{ "icon.png" | absURL }}", 
+    "icon": "{{ "icon.png" | absURL }}", 
+
     {{- with .Site.Author }}
     "author": {
         "name": "{{ .name }}"
