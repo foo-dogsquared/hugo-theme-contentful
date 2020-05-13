@@ -19,10 +19,10 @@
 }
 
 [data-theme="dark"]:root {
-    --foreground: #FAFAFA;
-    --foreground-light: #E1E1E1;
     --background: #000000;
     --background-light: #363537;
+    --foreground: #FAFAFA;
+    --foreground-light: #E1E1E1;
     --grey: #919191;
 }
 
@@ -72,6 +72,10 @@ a:visited {
     color: #AC5A82;
 }
 
+code {
+    font-size: 0.9em;
+}
+
 dd, li, p, td {
     line-height: 1.5;
 }
@@ -81,7 +85,7 @@ p {
     margin-bottom: 1rem;
 }
 
-dd{
+dd {
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
 }
@@ -182,6 +186,7 @@ aside {
     border: 1px solid var(--grey);
     border-left: 3px solid var(--grey);
     font-size: calc(1rem * (1 - var(--vertical-rhythm-reduction)));
+    font-family: var(--header-family);
     line-height: calc(1rem * (1 + var(--vertical-rhythm-reduction)));
     margin: 1rem 0;
     padding: 0.5rem;
@@ -243,9 +248,9 @@ footer {
 
 
 /* Mobile styles */
-@media (max-width: 860px) {
+@media all and (max-width: 860px) {
     html:root {
-        --font-size: 18px;
+        --font-size: 17px;
     }
 
     .post {

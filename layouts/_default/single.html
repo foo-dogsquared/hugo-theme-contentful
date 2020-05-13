@@ -8,7 +8,7 @@
         {{- with .Params.author }}
         {{- $names := slice }}
         {{- range . }}{{ $names = $names | append .name }}{{ end }}
-        <p class="author">{{ i18n "published_by" }}: {{ delimit $names ", " (printf ", %s " (i18n "and")) }}</p>
+        <p class="author">{{ i18n "published_by" }}: {{ delimit $names ", " (printf " %s " (i18n "and")) }}</p>
         {{- end }}
 
         <!-- Only show the creation date if the `date` field is valid. -->
@@ -24,13 +24,9 @@
 
         <!-- Link the translated versions if the article has at least one translated page. -->
         {{- if .IsTranslated }}
-        <p>
-        {{- i18n "available_translations" }}: 
-        |
-        {{ range .Translations }}
-        <a href="{{ .Permalink }}">{{ with .Language.LanguageName }}{{ . }}{{ else }}{{ .Lang }}{{ end }}</a> |
-        {{- end }}
-        </p>
+        {{ $langs := slice }}
+        {{ range .Translations }}{{ $langs = $langs | append (printf "<a href=%s>%s</a>" .Permalink (cond (ne .Language.LanguageName nil) .Language.LanguageName .Lang)) }}{{ end }}
+        <p>{{ i18n "available_translations" }}: {{ delimit $langs "," (printf " %s " (i18n "and")) }}</p>
         {{- end }}
     </div>
 </header>
