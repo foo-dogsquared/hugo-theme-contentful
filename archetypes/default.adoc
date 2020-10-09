@@ -12,5 +12,5 @@ tags:
 
 = {{ replace .Name "-" " " | title }}
 {{ .Site.Author.name }} {{ with .Site.Author.email }}<{{ . }}>{{ end }}
-{{ dateFormat "2006-01-02" .Date }}
+{{ dateFormat "2006-01-02 15:04 -0700" .Date }}
 :stem: latexmath
