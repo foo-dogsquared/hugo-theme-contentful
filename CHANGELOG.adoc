@@ -3,16 +3,33 @@ All notable changes to this project will be documented in this file.
 
 The format is based on https://keepachangelog.com/en/1.0.0/[Keep a Changelog],
 and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Versioning].
-(Big disclaimer)
 
 
 
-== [Unreleased]
+
+== [2.0.0] - 2020-10-21
 
 
 === Changed
 
-* Fix relative links for multilingual mode.
+* Change the CSS linking with https://gohugo.io/hugo-pipes/introduction/[Hugo Pipes], moving it into the assets folder.
+* Update the documentation with additional installations with Hugo Module.
+
+
+=== Removed
+
+* Web feed templates as they have been moved into its https://github.com/foo-dogsquared/hugo-web-feeds[own theme component].
+The removal of the web feed templates marks this update as a breaking change (I think).
+* In effect to the removal of the feed templates, `$.Site.Params.feedLimit` is also removed.
+But really, I removed it because I recognized https://gohugo.io/templates/rss/#configure-rss[it is a built-in option] in Hugo with `$.Site.Config.Services.RSS.Limit`.
+* The recipe section in the README as it is getting too big and also I would argue it should be in its own folder or something.
+For now, I'll be putting them in the demo branch as its own section which is better for first-time users.
+
+
+=== Fixed
+
+* Relative links for multilingual mode.
+* Table of contents have conditional rendering made possible with simple CSS (surprisingly).
 
 
 
