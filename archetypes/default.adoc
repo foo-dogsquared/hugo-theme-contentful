@@ -1,5 +1,5 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "{{ humanize .Name }}"
 date: {{ .Date }}
 draft: true
 
@@ -10,7 +10,7 @@ tags:
     - "tag2"
 ---
 
-= {{ replace .Name "-" " " | title }}
+= {{ humanize .Name }}
 {{ .Site.Author.name }} {{ with .Site.Author.email }}<{{ . }}>{{ end }}
-{{ dateFormat "2006-01-02 15:04 -0700" .Date }}
+{{ dateFormat "2006-01-02 15:04:05 -0700" .Date }}
 :stem: latexmath

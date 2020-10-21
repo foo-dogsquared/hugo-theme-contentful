@@ -35,6 +35,12 @@
 
 {{ $is_toc := cond (ne .Params.toc nil) .Params.toc $.Site.Params.toc }}
 {{ if $is_toc }}
+<style>
+#TableOfContents:not(:empty)::before {
+  content: "{{ i18n "table_of_contents" }}";
+  font-weight: bold;
+}
+</style>
 {{ .TableOfContents }}
 {{ end }}
 

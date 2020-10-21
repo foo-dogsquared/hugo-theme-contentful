@@ -25,8 +25,11 @@ other = "Updated"
 [available_translations]
 other = "Translations"
 
+[table_of_contents]
+other = "Table of contents"
 
-# General 
+
+# General
 [and]
 other = "and"
 
@@ -35,3 +38,6 @@ other = "Back to home"
 
 [multilingual]
 other = "Available in other languages"
+
+[page_not_found]
+other = "Page not found"

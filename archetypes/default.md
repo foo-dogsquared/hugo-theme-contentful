@@ -1,5 +1,5 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "{{ humanize .Name }}"
 date: {{ .Date }}
 draft: true
 

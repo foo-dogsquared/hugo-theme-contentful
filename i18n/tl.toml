@@ -25,6 +25,9 @@ other = "Binago noong"
 [available_translations]
 other = "Mga pagsasalin"
 
+[table_of_contents]
+other = "Talaan ng nilalaman"
+
 
 # General
 [and]
@@ -35,3 +38,6 @@ other = "Balik sa homepage"
 
 [multilingual]
 other = "Ibang lengwahe"
+
+[page_not_found]
+other = "Hindi makita ang webpage na hinahanap mo"

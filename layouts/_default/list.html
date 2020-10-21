@@ -2,10 +2,13 @@
 <hr>
 {{ .Content }}
 
+{{- /* The homepage should show only pages from the given sections (with `$.Site.Params.mainSections`).
+Otherwise, we take the pages of a section. */ -}}
 {{ $pages := .Pages }}
 {{ if .IsHome }}
 {{ $pages = where $.Site.RegularPages "Type" "in" $.Site.Params.mainSections }}
 {{ end }}
+
 {{ range (where (.Paginate $pages).Pages "Params.hidden" "!=" true) }}
 <article class="post">
     <a href="{{ .Permalink }}" aria-label="{{ .Title }}"><h1>{{ .Title }}</h1></a>

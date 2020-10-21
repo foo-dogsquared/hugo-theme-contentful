@@ -1,5 +1,7 @@
 <title>{{ if .IsHome }}{{ $.Site.Title | safeHTML }}{{ else }}{{ .Title | safeHTML }}{{ end }}</title>
-<link rel="stylesheet" href="{{ "css/main.css" | absURL }}" />
+
+{{- $style := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint -}}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
 
 {{- /* Some sane <meta> tags default */ -}}
 {{ hugo.Generator }}
