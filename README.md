@@ -31,13 +31,19 @@ The quickest way to describe Contentful in one go is a list.
 The core feature of Contentful is to be easy to extend while providing sane and modern foundations, if you don't want to.
 Here are the default features of the theme provides:
 
-* Beautifully simple default layout while made to be easily modified and extensible.
-
+* Beautiful reader-mode default layout.
 * Dark mode toggle.
-
 * Focus on web accessibility and search engine optimization (SEO) including [Twitter cards](https://dev.twitter.com/cards) and [Open Graph protocol](https://opengraphprotocol.org/).
-
 * Google Analytics and Disqus integration.
+* Web accessible-ready by following the standard practices as referred to by the https://www.w3.org/TR/wai-aria-1.1/[W3C]
+
+As previously mentioned, this theme is made to be easily extensible.
+With some integration with the huge ecosystem of Hugo, you can make the theme feature the following highlights.
+
+* Deploy with web feeds with [a Hugo module I made that adds them](https://github.com/foo-dogsquared/hugo-web-feeds).
+* Make more modern with [a theme extension](https://github.com/foo-dogsquared/hugo-mod-more-contentful).
+
+More possibilities are there if you tinker it with your own modifications.
 
 
 
