@@ -227,17 +227,40 @@ footer {
 }
 
 .pagination {
-    list-style: none;
     display: flex;
-    justify-content: space-evenly;
-    padding: 0;
-    margin: 1rem;
+    font-size: 1rem;
+    list-style: none;
+    justify-content: center;
+    margin: 1.2rem 0;
+    padding: 0.8rem;
+}
+
+.pagination > * {
+    margin: 0 0.25em;
+    text-decoration: none;
+}
+
+.page-link {
+    background: var(--background-light);
+    color: var(--foreground-light);
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+.page-link:visited {
+    color: var(--foreground-light);
+}
+
+.page-link--active {
+    font-weight: bolder;
+}
+
+.page-link:hover {
+    background: var(--foreground);
+    color: var(--background);
 }
 
 .post {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
     margin-top: 1rem;
 }
 

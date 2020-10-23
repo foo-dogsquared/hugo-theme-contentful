@@ -1,17 +1,3 @@
-# Pagination
-[first_page]
-other = "Unang pahina"
-
-[prev_page]
-other = "Balik"
-
-[next_page]
-other = "Sunod"
-
-[last_page]
-other = "Huling pahina"
-
-
 # Content
 [published_by]
 other = "Sinulat ni"

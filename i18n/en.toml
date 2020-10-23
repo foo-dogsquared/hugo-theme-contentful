@@ -1,17 +1,3 @@
-# Pagination
-[first_page]
-other = "Newest posts"
-
-[prev_page]
-other = "Newer posts"
-
-[next_page]
-other = "Older posts"
-
-[last_page]
-other = "Oldest posts"
-
-
 # Content
 [published_by]
 other = "Authors"

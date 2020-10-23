@@ -16,21 +16,5 @@ Otherwise, we take the pages of a section. */ -}}
 </article>
 {{ end }}
 
-<div class="pagination">
-    {{- if .Paginator.HasPrev }}
-    {{- if ne .Paginator.First .Paginator.Prev -}}
-        <a rel="first" href="{{ .Paginator.First.URL }}">{{ i18n "first_page" }}</a>
-    {{- end }}
-
-        <a rel="prev" href="{{ .Paginator.Prev.URL }}">{{ i18n "prev_page" }}</a>
-    {{- end }}
-
-    {{- if .Paginator.HasNext -}}
-        <a rel="next" href="{{ .Paginator.Next.URL }}">{{ i18n "next_page" }}</a>
-
-    {{- if ne .Paginator.Last .Paginator.Next -}}
-        <a rel="last" href="{{ .Paginator.Last.URL }}">{{ i18n "last_page" }}</a>
-    {{- end }}
-    {{- end }}
-</div>
+{{ partial "pagination.html" (dict "Paginator" .Paginator "activeNumberOfPages" 2) }}
 {{ end }}

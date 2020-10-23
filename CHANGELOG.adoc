@@ -13,6 +13,13 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 === Changed
 
 * Change the CSS linking with https://gohugo.io/hugo-pipes/introduction/[Hugo Pipes], moving it into the assets folder.
+
+* Improve the pagination partial.
+** It has been modularized and refactored for easier development when extending the theme.
+** The appearance has been revamped to be more intuitive.
+** Replaces with numbers instead of the horrible phrases (which I didn't realize is horrible) so the i18n options for those are also gone.
+** The pagination is also smarter when applying the ellipses, making sure to only skip if the difference between pages is more than one.
+
 * Update the documentation with additional installations with Hugo Module.
 
 
