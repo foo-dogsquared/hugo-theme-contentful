@@ -104,8 +104,8 @@ tr:nth-child(even) {
 }
 
 pre {
-    background: var(--background-light);
-    border: var(--background) solid 1px;
+    background: var(--foreground);
+    color: var(--background);
     font-family: var(--mono-family);
     font-size: 1rem;
     line-height: 1.5;
@@ -268,6 +268,11 @@ footer {
     margin: 0 auto;
 }
 
+.post__meta {
+    margin: 0.5rem auto;
+    font-size: 0.9em;
+}
+
 .post__meta > * {
     margin: 0.5rem auto;
 }
@@ -277,12 +282,6 @@ footer {
 @media all and (max-width: 860px) {
     html:root {
         --font-size: 17px;
-    }
-
-    .post {
-        align-items: unset;
-        flex-flow: column;
-        margin-bottom: 1rem;
     }
 }
 

@@ -1,6 +1,10 @@
 <title>{{ if .IsHome }}{{ $.Site.Title | safeHTML }}{{ else }}{{ .Title | safeHTML }}{{ end }}</title>
 
-{{- $style := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint -}}
+{{- /* Only enable asset bundling in production */ -}}
+{{- $style := resources.Get "css/main.css" -}}
+{{- if hugo.IsProduction }}
+  {{- $style = $style | resources.Minify | resources.Fingerprint -}}
+{{- end }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
 {{- /* Some sane <meta> tags default */ -}}
@@ -20,7 +24,7 @@
 {{- end }}
 
 
-{{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+{{- if hugo.IsProduction }}
     {{ template "_internal/google_analytics_async.html" . }}
     {{ template "_internal/disqus.html" . }}
 {{- end }}

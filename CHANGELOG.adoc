@@ -7,7 +7,7 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 
 
-== [2.0.0] - 2020-10-21
+== [2.0.0] - 2020-10-24
 
 
 === Changed
@@ -20,6 +20,12 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 ** Replaces with numbers instead of the horrible phrases (which I didn't realize is horrible) so the i18n options for those are also gone.
 ** The pagination is also smarter when applying the ellipses, making sure to only skip if the difference between pages is more than one.
 
+* Improve the web accessibility of the site.
+For future reference, refer to the https://html.spec.whatwg.org/[HTML spec] and https://www.w3.org/TR/wai-aria-1.1/[ARIA specs and practices].
+** Starting with the pagination, `rel` attributes have been added.
+** The content template (`layouts/_default/single.html`) has been updated with the appropriate semantic elements.
+** Apparently, the `<date>` element is non-existent (as of 2020-10-24) and replaced with the https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time[`<time>`] element.
+
 * Update the documentation with additional installations with Hugo Module.
 
 
@@ -27,8 +33,10 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 * Web feed templates as they have been moved into its https://github.com/foo-dogsquared/hugo-web-feeds[own theme component].
 The removal of the web feed templates marks this update as a breaking change (I think).
+
 * In effect to the removal of the feed templates, `$.Site.Params.feedLimit` is also removed.
 But really, I removed it because I recognized https://gohugo.io/templates/rss/#configure-rss[it is a built-in option] in Hugo with `$.Site.Config.Services.RSS.Limit`.
+
 * The recipe section in the README as it is getting too big and also I would argue it should be in its own folder or something.
 For now, I'll be putting them in the demo branch as its own section which is better for first-time users.
 
@@ -36,6 +44,7 @@ For now, I'll be putting them in the demo branch as its own section which is bet
 === Fixed
 
 * Relative links for multilingual mode.
+
 * Table of contents have conditional rendering made possible with simple CSS (surprisingly).
 
 
