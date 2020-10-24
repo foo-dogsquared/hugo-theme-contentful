@@ -8,7 +8,7 @@ description = "A minimal and extensible theme that focuses on being contentful a
 homepage = "https://github.com/foo-dogsquared/hugo-theme-contentful"
 tags = ["minimal", "multilingual"]
 features = []
-min_version = "0.58"
+min_version = "0.74"
 
 [author]
   name = "foo-dogsquared"

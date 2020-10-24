@@ -12,6 +12,8 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 === Changed
 
+* Update the required Hugo version to v0.74.
+
 * Change the CSS linking with https://gohugo.io/hugo-pipes/introduction/[Hugo Pipes], moving it into the assets folder.
 
 * Improve the pagination partial.

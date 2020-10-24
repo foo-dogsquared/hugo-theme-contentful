@@ -10,12 +10,18 @@
 {{- /* Some sane <meta> tags default */ -}}
 {{ hugo.Generator }}
 <meta charset="utf-8">
-<meta name="author" content="{{ with .Param "author.name" }}{{ . }}{{ else }}{{ $.Site.Author.name }}{{ end }}" />
+
+{{- with .Site.Author }}
+{{- $names := slice }}
+{{- range . }}{{ $names = $names | append .name }}{{ end }}
+<meta name="author" content="{{ delimit $names ", " (printf " %s " (i18n "and")) }}" />
+{{- end }}
+
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="referrer" content="no-referrer" />
 <meta name="description" content="{{ if (and (eq .Kind "home") .IsHome) }}{{ .Site.Title }}{{ else }}{{ .Summary | safeHTML }}{{ end }}" />
-{{- template "_internal/twitter_cards.html" . -}}
-{{- template "_internal/opengraph.html" . -}}
+{{- template "_internal/twitter_cards.html" . }}
+{{- template "_internal/opengraph.html" . }}
 
 
 {{- /* Linking all of the output formats for discovery. */ -}}

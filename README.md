@@ -35,7 +35,7 @@ Here are the default features of the theme provides:
 * Dark mode toggle.
 * Focus on web accessibility and search engine optimization (SEO) including [Twitter cards](https://dev.twitter.com/cards) and [Open Graph protocol](https://opengraphprotocol.org/).
 * Google Analytics and Disqus integration.
-* Web accessible-ready by following the standard practices as referred to by the https://www.w3.org/TR/wai-aria-1.1/[W3C]
+* Web accessible-ready by following the standard practices as referred to by the [W3C](https://www.w3.org/TR/wai-aria-1.1/).
 
 As previously mentioned, this theme is made to be easily extensible.
 With some integration with the huge ecosystem of Hugo, you can make the theme feature the following highlights.
@@ -51,7 +51,7 @@ More possibilities are there if you tinker it with your own modifications.
 ## Installation
 
 I assume you already have [Git](https://git-scm.com/) and [Hugo](https://gohugo.io/) installed.
-For future reference, the minimum Hugo version required is at v0.58.
+For future reference, the minimum Hugo version required is at v0.74.
 Additionally, the following instructions are done as if you're in a Hugo directory.
 
 Installation of a Hugo theme is pretty simple and you can do it in multiple ways.

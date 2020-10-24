@@ -17,13 +17,13 @@
         <!-- Publication date. -->
         <p data-content-publication-date="{{ .Date }}">{{ i18n "published_on" }}: <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></p>
         {{- end }}
-    
+
         <!-- Modification date (will only appear if the publication date is less than the modified date.) -->
         {{- if ne .Date .Lastmod }}
         <p data-content-modification-date="{{ .Lastmod }}">{{ i18n "updated_on" }}: <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time></p>
         {{- end }}
-    
-        <!-- Link the translated versions if the article has at least one translated page. -->
+
+       <!-- Link the translated versions if the article has at least one translated page. -->
         {{- if .IsTranslated }}
         {{- $lang_links := slice }}
         {{- $langs := slice }}
