@@ -4,12 +4,12 @@
     <header>
         <h1>{{ .Title }}</h1>
     </header>
-    <div class="post__meta">
+    <div class="post__meta--single">
         <!-- List the author(s) of the article. -->
         {{- with .Params.author }}
         {{- $names := slice }}
         {{- range . }}{{ $names = $names | append .name }}{{ end }}
-        <p data-content-author="{{ jsonify $names }}">{{ i18n "published_by" }}: {{ delimit $names ", " (printf " %s " (i18n "and")) }}</p>
+        <p data-content-author="{{ jsonify . }}">{{ i18n "published_by" }}: {{ delimit $names ", " (printf " %s " (i18n "and")) }}</p>
         {{- end }}
 
         <!-- Only show the creation date if the `date` field is valid. -->

@@ -52,9 +52,9 @@ More possibilities are there if you tinker it with your own modifications.
 
 I assume you already have [Git](https://git-scm.com/) and [Hugo](https://gohugo.io/) installed.
 For future reference, the minimum Hugo version required is at v0.74.
-Additionally, the following instructions are done as if you're in a Hugo directory.
+Furthermore, the following instructions are done as if you're in a Hugo directory.
 
-Installation of a Hugo theme is pretty simple and you can do it in multiple ways.
+You can install the Hugo theme in two ways.
 
 
 ### Using Hugo module

@@ -7,6 +7,31 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 
 
+== [2.1.0] - 2020-10-28
+
+
+=== Added
+
+* Authors are now added in the post metadata template.
+
+
+=== Changed
+
+* Improve the taxonomy template inspired from the https://www.oilshell.org/blog/tags.html[Oil shell blog tags template].
+It should offer an improved user experience with the listing of the pages and a convenient link of the term as a standalone page.
+
+
+=== Fixed
+
+* The post metadata with the grey text indicating it is secondary content and whatnot.
+
+* Datetimes in the https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*[data attributes] now use full datetimes.
+
+* Authors in the data attributes in the content template now use the full data from the content frontmatter.
+
+
+
+
 == [2.0.0] - 2020-10-24
 
 

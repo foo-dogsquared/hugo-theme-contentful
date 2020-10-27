@@ -13,10 +13,20 @@ Otherwise, we take the pages of a section. */ -}}
 <article class="post">
     <h1><a href="{{ .Permalink }}" aria-label="{{ .Title }}">{{ .Title }}</a></h1>
     <div class="post__meta">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-        {{- if and .GitInfo (ne (.Date.Format "2006-01-02") (.Lastmod.Format "2006-01-02")) }}
-        (Modified on <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time>)
-        {{- end }}
+        <span>
+            <time datetime="{{ .Date }}">
+                {{ .Date.Format "2006-01-02" }}
+            </time>
+            {{- if and .GitInfo (ne (.Date.Format "2006-01-02") (.Lastmod.Format "2006-01-02")) }}
+            (<time datetime="{{ .Lastmod }}">{{ .Lastmod.Format "2006-01-02" }}</time>)
+            {{- end }}
+        </span>
+
+        {{- /* The authors are appended with 'et al' if there's more than one author in the map. */ -}}
+        {{ with .Params.author }}
+            {{ $author := index (first 1 .) 0 }}
+            <span data-authors="{{ jsonify . }}">{{ $author.name }}{{ if ge (len .) 2 }}, et al.{{ end }}</span>
+        {{ end }}
     </div>
 </article>
 {{ end }}

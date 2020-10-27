@@ -3,12 +3,22 @@
 
 <h1>{{ .Title }}</h1>
 
-<ul>
-  {{ range .Data.Terms }}
-  <li>
-    <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }})
-  </li>
-  {{ end }}
-</ul>
+{{- range .Data.Terms }}
+  {{- $pages := (where .Pages "Params.hidden" "!=" true) }}
+  {{- if ge (len $pages) 1 }}
+  <header id="{{ .Page.Title | urlize }}" class="taxonomy__header">
+    <h2>{{ .Page.Title }}</h2>
+    <small>(<a href="{{ .Page.RelPermalink }}">Permalink</a>)</small>
+  </header>
+  <ul class="taxonomy__pages">
+  {{- range $pages }}
+      <li class="taxonomy__page">
+          <date datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</date>
+          <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+      </li>
+  {{- end }}
+  </ul>
+  {{- end }}
+{{- end }}
 
 {{ end }}
