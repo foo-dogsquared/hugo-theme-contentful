@@ -205,6 +205,15 @@ This theme is inspired by the following beautiful and minimal pieces of work:
 
 
 
+## Frequently asked questions
+
+- How to extend with custom styling?
+    - Simply create `assets/css/extend.css` and you're on your merry way.
+      This will be concatenated with the main stylesheet so it will still be in one file.
+
+
+
+
 ## License
 
 This theme is licensed under MIT license.

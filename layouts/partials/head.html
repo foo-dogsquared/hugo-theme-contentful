@@ -2,6 +2,16 @@
 
 {{- /* Only enable asset bundling in production */ -}}
 {{- $style := resources.Get "css/main.css" -}}
+
+{{- /* The custom stylesheet. */ -}}
+{{- $custom_styles := resources.Get "css/extend.css" -}}
+
+{{- /*
+The order is important since CSS needs orders.
+Which means the custom stylesheet should be the last to be concatenated.
+*/ -}}
+{{- $style = slice $style $custom_styles | resources.Concat "css/index.css" -}}
+
 {{- if hugo.IsProduction }}
   {{- $style = $style | resources.Minify | resources.Fingerprint -}}
 {{- end }}
