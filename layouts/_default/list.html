@@ -9,18 +9,17 @@ Otherwise, we take the pages of a section. */ -}}
 {{ $pages = where $.Site.RegularPages "Type" "in" $.Site.Params.mainSections }}
 {{ end }}
 
-{{ range (where (.Paginate $pages).Pages "Params.hidden" "!=" true) }}
+{{ range (.Paginate $pages).Pages }}
 <article class="post">
     <h1><a href="{{ .Permalink }}" aria-label="{{ .Title }}">{{ .Title }}</a></h1>
     <div class="post__meta">
-        <span>
-            <time datetime="{{ .Date }}">
-                {{ .Date.Format "2006-01-02" }}
-            </time>
-            {{- if and .GitInfo (ne (.Date.Format "2006-01-02") (.Lastmod.Format "2006-01-02")) }}
-            (<time datetime="{{ .Lastmod }}">{{ .Lastmod.Format "2006-01-02" }}</time>)
-            {{- end }}
-        </span>
+        <time datetime="{{ .Date }}">
+            {{ .Date.Format "2006-01-02" }}
+        </time>
+
+        {{- if and .GitInfo (ne (.Date.Format "2006-01-02") (.Lastmod.Format "2006-01-02")) }}
+        <time datetime="{{ .Lastmod }}">{{ .Lastmod.Format "2006-01-02" }}</time>
+        {{- end }}
 
         {{- /* The authors are appended with 'et al' if there's more than one author in the map. */ -}}
         {{ with .Params.author }}

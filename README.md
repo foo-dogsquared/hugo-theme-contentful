@@ -98,6 +98,8 @@ Since it is hosted on a Git repo, you can simply clone it like the following com
 git clone https://github.com/foo-dogsquared/hugo-theme-contentful.git themes/contentful
 ```
 
+If you intend to make major modifications for yourself, you can keep the project either as a [Git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) (e.g., `git submodule add $GIT_REPO themes/contentful`) or as a [Git subtree](http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/) (e.g., `git subtree add --prefix themes/contentful http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/ --squash`).
+
 To try the theme out, just execute Hugo using the theme like in the following command.
 
 ```shell
@@ -131,8 +133,9 @@ paginate = 20
 
 
 [author]
-    name = "John Doe"
-    email = "johndoe@example.com"
+    [john_doe]
+        name = "John Doe"
+        email = "johndoe@example.com"
 
 
 [languages]
@@ -182,12 +185,26 @@ paginate = 20
 
 
 [params]
-    # Enable table of content generation (only valid for Markdown files to be parsed by Hugo's built-in parsers).
+    # Enable table of content generation (only valid for Markdown and Asciidoctor files to be parsed by Hugo's built-in parsers).
     toc = true
-
-    # Generate the feeds with the given number of most recent posts.
-    feedLimit = true
 ```
+
+For the author configuration, it is a map with each key holding a map value.
+The value only requires `name` and you can set the structure to your own liking.
+Most opt for an additional email key for web feeds.
+My [web feed layout](https://github.com/foo-dogsquared/hugo-web-feeds) searches for them as well as a `url` key.
+
+
+### Page configuration
+
+Similar to the site configuration, this theme tries to minimize the use of custom parameters to be easily extensible.
+Here's the exhaustive list of those parameters.
+
+- `toc` indicates if the table of contents is to be shown.
+This only works as expected for Markdown.
+For other formats such as Asciidoctor-flavored files, you have to apply the attribute `toc` globally and enable the site parameter `toc`.
+
+- `author` is similar to the site author map with the `name` as the only required key.
 
 
 
@@ -207,9 +224,22 @@ This theme is inspired by the following beautiful and minimal pieces of work:
 
 ## Frequently asked questions
 
+- How to hide a post from being listed?
+    - You can make use of [the build options](https://gohugo.io/content-management/build-options/) with `_build.list` have a value of `never`.
+      Though, this is only available in Hugo v0.65.0 and above.
+
 - How to extend with custom styling?
     - Simply create `assets/css/extend.css` and you're on your merry way.
-      This will be concatenated with the main stylesheet so it will still be in one file.
+      This will be appended with the main stylesheet so it will still be in one file.
+
+- Table of contents for Asciidoctor?
+    - You can enable it with `markup.asciidocExt.attributes.toc` set to `true` in the site config.
+      Then enable it with `params.toc` (e.g., `params.toc = true`) also in the site config to globally apply to all posts.
+      You can also enable it in your content with the `toc` frontmatter.
+
+- Theme-specific custom shortcodes?
+    - No.
+    This theme only aims to be a skin/UI for your content so you can easily migrate your content from one theme to another.
 
 
 

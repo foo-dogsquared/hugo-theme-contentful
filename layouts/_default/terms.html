@@ -4,11 +4,11 @@
 <h1>{{ .Title }}</h1>
 
 {{- range .Data.Terms }}
-  {{- $pages := (where .Pages "Params.hidden" "!=" true) }}
+  {{- $pages := .Pages }}
   {{- if ge (len $pages) 1 }}
   <header id="{{ .Page.Title | urlize }}" class="taxonomy__header">
     <h2>{{ .Page.Title }}</h2>
-    <small>(<a href="{{ .Page.RelPermalink }}">Permalink</a>)</small>
+    <small>(<a href="{{ .Page.RelPermalink }}">{{ i18n "permalink" | default "Permalink" }}</a>)</small>
   </header>
   <ul class="taxonomy__pages">
   {{- range $pages }}

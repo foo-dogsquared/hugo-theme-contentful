@@ -3,6 +3,7 @@
 # Edit at https://www.gitignore.io/?templates=hugo
 
 /content/
+/node_modules/
 
 ### Hugo ###
 # Generated files by hugo
