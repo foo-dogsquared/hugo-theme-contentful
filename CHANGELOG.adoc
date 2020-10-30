@@ -20,6 +20,11 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 * The post metadata styling.
 
 
+=== Fixed
+
+* The pagination classes has been placed in the right elements.
+
+
 === Removed
 
 * The `hidden` frontmatter option has been removed in favor of the https://gohugo.io/content-management/build-options/[build options].
