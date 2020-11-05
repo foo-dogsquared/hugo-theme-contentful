@@ -19,6 +19,9 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 * The post metadata styling.
 
+* All references of `.Date` into `.PublishDate` as it is more reliable.
+It is also one of the https://gohugo.io/content-management/front-matter#predefined[predefined front matter variable] which can be defined with the `publishdate` variable.
+
 
 === Fixed
 

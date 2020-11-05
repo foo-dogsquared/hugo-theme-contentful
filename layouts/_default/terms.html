@@ -13,7 +13,7 @@
   <ul class="taxonomy__pages">
   {{- range $pages }}
       <li class="taxonomy__page">
-          <date datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</date>
+          <date datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006-01-02" }}</date>
           <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
       </li>
   {{- end }}

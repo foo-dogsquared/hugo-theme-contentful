@@ -41,9 +41,21 @@ As previously mentioned, this theme is made to be easily extensible.
 With some integration with the huge ecosystem of Hugo, you can make the theme feature the following highlights.
 
 * Deploy with web feeds with [a Hugo module I made that adds them](https://github.com/foo-dogsquared/hugo-web-feeds).
-* Make more modern with [a theme extension](https://github.com/foo-dogsquared/hugo-mod-more-contentful).
+* Use the whole icon set from [Simple Icons](https://simpleicons.org/) with a [Hugo module](https://github.com/foo-dogsquared/hugo-mod-simple-icons).
+* Make more it modern with [an extended version of this theme](https://github.com/foo-dogsquared/hugo-theme-more-contentful).
 
 More possibilities are there if you tinker it with your own modifications.
+
+
+
+
+## Project goals
+
+* A clean reader interface for your content that is easy to modify to your liking.
+* Make it easy for the user to seamlessly migrate or switch between themes.
+    - Which means, no custom shortcodes, archetypes, or (lots of) frontmatter variables.
+* Focus on making it accessible to visually-impaired users.
+* A low web budget of less 30KB that can load under 1 second (with the default configuration, anyways).
 
 
 
@@ -60,7 +72,8 @@ You can install the Hugo theme in two ways.
 ### Using Hugo module
 
 You can quickly add this theme as a [Hugo module](https://gohugo.io/hugo-modules/).
-It does have a prerequisite of using Hugo v0.56.0 and above as well as a [Go runtime](https://golang.org/).
+Hugo modules are only available in Hugo v0.56.0.
+It also requires a Go runtime and Git installed.
 
 To get started, initialize your Hugo project as a Hugo module.
 
