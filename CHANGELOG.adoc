@@ -29,6 +29,9 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 * The `hidden` frontmatter option has been removed in favor of the https://gohugo.io/content-management/build-options/[build options].
 
+* The theme archetypes (i.e., `./archetypes`) as they can disrupt the content creation of a user.
+To be fair, this will only happen if they have no archetypes.
+
 
 
 
