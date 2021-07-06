@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us"><title>Customizing your head</title>
+<link rel="stylesheet" href="https://foo-dogsquared.github.io/hugo-theme-contentful/css/main.min.ac4668a81007ca38fcac8e88436ad4fa6a969ee4ce9352f52f795abf04e1624a.css" /><meta name="generator" content="Hugo 0.76.0" />
+<meta charset="utf-8">
+<meta name="author" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="referrer" content="no-referrer" />
+<meta name="description" content="Let’s start with the most basic and perhaps most useful customization: modifying the &lt;head&gt;. This is useful for adding your own CSS and JavaScript files, changing certain metadata, or adding icons.
+ First, copy the head partial from the theme (theme/contentful/layouts/partials/head.html) to your own (layouts/partials/head.html). We’re simply taking advantage of Hugo’s lookup order where we’ve override the head partial with our own copy.
+ Then, feel free to add your own (or others&#39;) scripts and stylesheets, icons and other metadata, or whatever suitable things." /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Customizing your head"/>
+<meta name="twitter:description" content="Let’s start with the most basic and perhaps most useful customization: modifying the &lt;head&gt;. This is useful for adding your own CSS and JavaScript files, changing certain metadata, or adding icons.
+ First, copy the head partial from the theme (theme/contentful/layouts/partials/head.html) to your own (layouts/partials/head.html). We’re simply taking advantage of Hugo’s lookup order where we’ve override the head partial with our own copy.
+ Then, feel free to add your own (or others&#39;) scripts and stylesheets, icons and other metadata, or whatever suitable things."/>
+<meta property="og:title" content="Customizing your head" />
+<meta property="og:description" content="Let’s start with the most basic and perhaps most useful customization: modifying the &lt;head&gt;. This is useful for adding your own CSS and JavaScript files, changing certain metadata, or adding icons.
+ First, copy the head partial from the theme (theme/contentful/layouts/partials/head.html) to your own (layouts/partials/head.html). We’re simply taking advantage of Hugo’s lookup order where we’ve override the head partial with our own copy.
+ Then, feel free to add your own (or others&#39;) scripts and stylesheets, icons and other metadata, or whatever suitable things." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://foo-dogsquared.github.io/hugo-theme-contentful/recipes/customizing-your-head/" />
+<meta property="article:published_time" content="2020-10-20T20:29:42+08:00" />
+<meta property="article:modified_time" content="2020-10-24T15:49:14+08:00" />
+<link rel="canonical" type="text/html" href="https://foo-dogsquared.github.io/hugo-theme-contentful/recipes/customizing-your-head/" />
+    
+    <script>
+    const theme = window.localStorage.getItem('theme'); 
+    if (theme) {
+        document.documentElement.dataset.theme = theme;
+    }
+</script>
+<body><nav aria-label="Primary navigation">
+    <a class="site__title" href="https://foo-dogsquared.github.io/hugo-theme-contentful/">Contentful</a>
+    <div class="site__links">
+        |
+        <a href="https://foo-dogsquared.github.io/hugo-theme-contentful/about/">About</a> |
+        <a href="https://foo-dogsquared.github.io/hugo-theme-contentful/categories/">Categories</a> |
+        <a href="https://foo-dogsquared.github.io/hugo-theme-contentful/recipes/">Recipes</a> |
+        <a href="https://foo-dogsquared.github.io/hugo-theme-contentful/tags/">Tags</a> |
+        
+    </div>
+    <button class="site__theme-btn" aria-label="theme-toggle" onclick="const theme = window.localStorage.getItem('theme') == 'dark' ? 'light' : 'dark'; window.localStorage.setItem('theme', theme); document.documentElement.dataset.theme = theme">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm2 0c0-5.514 4.486-10 10-10v20c-5.514 0-10-4.486-10-10z"></path>
+        </svg>
+    </button>
+</nav>
+
+
+<article>
+    <header>
+        <h1>Customizing your head</h1>
+    </header>
+    <div class="post__meta">
+        
+
+        
+        <p data-content-publication-date="2020-10-20 20:29:42 &#43;0800 &#43;0800">Created: <time datetime="2020-10-20">2020-10-20</time></p>
+    
+        
+        <p data-content-modification-date="2020-10-24 15:49:14 &#43;0800 &#43;0800">Updated: <time datetime="2020-10-24">2020-10-24</time></p>
+    
+        
+    </div>
+    <hr>
+
+    
+    
+    <style>
+    #TableOfContents:not(:empty)::before {
+      content: "Table of contents";
+      font-weight: bold;
+    }
+    </style>
+    <nav id="TableOfContents"></nav>
+
+
+    <main>
+    <div class="paragraph">
+<p>Let’s start with the most basic and perhaps most useful customization: modifying the <code>&lt;head</code>&gt;.
+This is useful for adding your own CSS and JavaScript files, changing certain metadata, or adding icons.</p>
+</div>
+<div class="paragraph">
+<p>First, copy the <code>head</code> partial from the theme (<code>theme/contentful/layouts/partials/head.html</code>) to your own (<code>layouts/partials/head.html</code>).
+We’re simply taking advantage of <a href="https://gohugo.io/templates/lookup-order/">Hugo’s lookup order</a> where we’ve override the <code>head</code> partial with our own copy.</p>
+</div>
+<div class="paragraph">
+<p>Then, feel free to add your own (or others&#39;) scripts and stylesheets, <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">icons and other metadata</a>, or whatever suitable things.</p>
+</div>
+<div class="paragraph">
+<p>In my case, I often use certain JavaScript libraries like <a href="https://www.mathjax.org/">MathJax</a> for mathematical typesetting, <a href="https://prismjs.com/">Prism</a> for syntax highlighting, and <a href="https://github.com/francoischalifour/medium-zoom/">medium-zoom</a> for interactive image zooms.</p>
+</div>
+<div class="paragraph">
+<p>Here’s the modified code.
+(The example code is snipped for brevity.)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-go" data-lang="go">&lt;!--snip--&gt;
+
+{{- /* MathJax */ -}}
+&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; defer src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+
+{{- /* Prism.js */ -}}
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-tomorrow.min.css&#34; type=&#34;text/css&#34;&gt;
+&lt;script defer src=&#34;https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-core.min.js&#34;&gt;&lt;/script&gt;
+&lt;script defer src=&#34;https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/autoloader/prism-autoloader.min.js&#34;&gt;
+&lt;script defer src=&#34;https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/keep-markup/prism-keep-markup.min.js&#34;&gt;
+
+{{- /* medium-zoom */ -}}
+&lt;script defer src=&#34;https://cdn.jsdelivr.net/npm/medium-zoom@1.0.5/dist/medium-zoom.min.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;window.addEventListener(&#39;load&#39;, () =&gt; mediumZoom(&#39;article img&#39;, { &#39;background&#39;: &#39;rgba(0, 0, 0, 0.75)&#39; }))&lt;/script&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since most of the JavaScript libraries used here are not really a requirement (except for MathJax for mathematical typesetting), I’ve set them to be loaded at the end of the page loading with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script"><code>defer</code> attribute</a>.
+If you have an inline script, you can simply wrap it in an event listener for page loading (<code>window.addEventListener(&#34;load&#34;, your_function_goes_here)</code>).</p>
+</div>
+<div class="paragraph">
+<p>If you want document-specific libraries, you have to pass some raw HTML through the parser of the document.
+For Goldmark, the default Markdown parser starting <a href="https://gohugo.io/news/0.60.0-relnotes/">Hugo v0.60.0</a>, blocks raw HTML by default and you can disable it by setting <code>markup.goldmark.renderer.unsafe</code> to <code>true</code>.</p>
+</div>
+<div class="paragraph">
+<p>For Blackfriday, it parses even the raw HTML just fine.
+Though, you have to set it as the default Markdown parser.</p>
+</div>
+<div class="paragraph">
+<p>For <a href="https://asciidoctor.org/">Asciidoctor</a>, you can use <a href="https://asciidoctor.org/docs/user-manual/#passthroughs">passthroughs</a> to get raw HTML through.</p>
+</div>
+
+    </main>
+</article>
+
+<hr>
+<footer>
+
+<p><a href="https://foo-dogsquared.github.io/hugo-theme-contentful/">Back to home</a></p>
+</footer>
+
+
+
+<p>Available in other languages:
+<span class="site__languages">|
+
+<a href="/hugo-theme-contentful/en">English</a> |
+
+<a href="/hugo-theme-contentful/tl">Tagalog</a> |
+
+</span>
+</p>
+
+
+
+<p>© 2021 Contentful</p>
+</body>
+</html>

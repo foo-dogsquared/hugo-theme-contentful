@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/categories/</loc>
+    <lastmod>2020-10-24T16:00:52+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tl"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/</loc>
+    <lastmod>2020-10-24T16:00:52+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tl"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/categories/recipe/</loc>
+    <lastmod>2020-10-24T15:49:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/recipes/simple-icons-integration/</loc>
+    <lastmod>2020-10-24T15:49:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tags/tag1/</loc>
+    <lastmod>2020-10-24T15:49:14+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tl"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/tags/tag1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tags/tag1/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tags/tag2/</loc>
+    <lastmod>2020-10-24T16:00:52+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tl"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/tags/tag2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tags/tag2/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tags/</loc>
+    <lastmod>2020-10-24T16:00:52+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tl"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/recipes/configurable-list-of-contacts/</loc>
+    <lastmod>2020-10-24T15:49:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/recipes/creating-an-archive-page/</loc>
+    <lastmod>2020-10-24T15:49:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/recipes/open-graph-protocol/</loc>
+    <lastmod>2020-10-24T15:49:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tags/seo/</loc>
+    <lastmod>2020-10-24T15:49:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tags/social-media/</loc>
+    <lastmod>2020-10-24T15:49:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tags/twitter/</loc>
+    <lastmod>2020-10-24T15:49:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/recipes/twitter-cards/</loc>
+    <lastmod>2020-10-24T15:49:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/recipes/customizing-your-head/</loc>
+    <lastmod>2020-10-24T15:49:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/articles/</loc>
+    <lastmod>2020-10-24T16:00:52+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tl"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/articles/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/articles/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/categories/category1/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tl"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/categories/category1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/categories/category1/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/articles/hidden-post-test/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tl"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/articles/hidden-post-test/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/articles/hidden-post-test/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/recipes/</loc>
+    <lastmod>2020-10-24T15:49:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tags/extending/</loc>
+    <lastmod>2020-10-24T15:49:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/categories/guide/</loc>
+    <lastmod>2020-10-24T16:00:52+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tl"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/categories/guide/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/categories/guide/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tags/theme/</loc>
+    <lastmod>2020-10-24T15:49:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/articles/rss-atom-and-json-feed-support/</loc>
+    <lastmod>2020-10-24T16:00:52+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tl"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/articles/rss-atom-and-json-feed-support/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/articles/rss-atom-and-json-feed-support/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tags/this-is-a-test-tag/</loc>
+    <lastmod>2020-10-24T16:00:52+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tl"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/tags/this-is-a-test-tag/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tags/this-is-a-test-tag/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tags/asciidoctor/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/categories/asciidoctor/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/articles/asciidoctor-extended-syntax-guide/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tags/guide/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tags/emoji/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/articles/emoji-support/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tags/mathjax/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/articles/mathjax-support-for-asciidoctor/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tags/markdown/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/categories/markdown/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/articles/mathjax-support-for-markdown/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/articles/asciidoctor-syntax-guide/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/articles/markdown-syntax-guide/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/articles/asciidoctor-article-template/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/about/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tl"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/about/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/archives/</loc>
+    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="tl"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/archives/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://foo-dogsquared.github.io/hugo-theme-contentful/archives/"
+                />
+  </url>
+  
+</urlset>
