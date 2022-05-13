@@ -44,13 +44,3 @@ Which means the custom stylesheet should be the last to be concatenated.
     {{ template "_internal/google_analytics_async.html" . }}
     {{ template "_internal/disqus.html" . }}
 {{- end }}
-
-
-{{- /* Persistent theme.
-It's a very small script so there's little effect on perceived performance. */ -}}
-<script>
-    const theme = window.localStorage.getItem('theme'); 
-    if (theme) {
-        document.documentElement.dataset.theme = theme;
-    }
-</script>

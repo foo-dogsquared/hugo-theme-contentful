@@ -19,12 +19,24 @@
     --border-style: var(--foreground) solid 1px;
 }
 
-[data-theme="dark"]:root {
-    --background: #000000;
-    --background-light: #363537;
-    --foreground: #FAFAFA;
-    --foreground-light: #CCCCCC;
-    --grey: #919191;
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: #FAFAFA;
+        --background-light: #E1E1E1;
+        --foreground: #000000;
+        --foreground-light: #363537;
+        --grey: #454545;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #000000;
+        --background-light: #363537;
+        --foreground: #FAFAFA;
+        --foreground-light: #CCCCCC;
+        --grey: #919191;
+    }
 }
 
 :root {
