@@ -1,0 +1,5 @@
+github.com/foo-dogsquared/hugo-theme-contentful v1.2.0 h1:if43vUzFAipKlnobL9THtW+QsmXp9ZPMe/vXY/vBofs=
+github.com/foo-dogsquared/hugo-theme-contentful v2.0.0+incompatible h1:IfLFh9SreWbTBuJKq6b5vvSLSThqZzHtmTL9/3HSLXs=
+github.com/foo-dogsquared/hugo-theme-contentful v2.0.0+incompatible/go.mod h1:65D70b+PuQbQu0BQKQiSgp7K5vfmxrPQkcMSNIZ5nA8=
+github.com/foo-dogsquared/hugo-web-feeds v0.0.1 h1:miuJMx2Plw+4TBGctI2CgWXilddEHFnKNDQ9kLNti3w=
+github.com/foo-dogsquared/hugo-web-feeds v0.0.1/go.mod h1:0WxK3+xNIj/Wpk2kkUW0p6Uqmr/OZjPsRtQDCMazNmI=
