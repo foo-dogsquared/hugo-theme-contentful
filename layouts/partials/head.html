@@ -32,6 +32,7 @@ Which means the custom stylesheet should be the last to be concatenated.
 <meta name="description" content="{{ if (and (eq .Kind "home") .IsHome) }}{{ .Site.Title }}{{ else }}{{ .Summary | safeHTML }}{{ end }}" />
 {{- template "_internal/twitter_cards.html" . }}
 {{- template "_internal/opengraph.html" . }}
+{{- template "_internal/schema.html" . }}
 
 
 {{- /* Linking all of the output formats for discovery. */ -}}
