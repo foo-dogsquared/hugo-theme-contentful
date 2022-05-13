@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tl/articles/</loc>
-    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <lastmod>2022-05-13T18:08:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -15,11 +14,9 @@
                 hreflang="tl"
                 href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/articles/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tl/categories/</loc>
-    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <lastmod>2022-05-13T18:08:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -30,11 +27,9 @@
                 hreflang="tl"
                 href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tl/categories/category1/</loc>
-    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <lastmod>2022-05-13T18:08:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -45,11 +40,9 @@
                 hreflang="tl"
                 href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/categories/category1/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tl/</loc>
-    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <lastmod>2022-05-13T18:08:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -60,11 +53,9 @@
                 hreflang="tl"
                 href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tl/articles/hidden-post-test/</loc>
-    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <lastmod>2022-05-13T18:08:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -75,11 +66,9 @@
                 hreflang="tl"
                 href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/articles/hidden-post-test/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tl/tags/tag1/</loc>
-    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <lastmod>2022-05-13T18:08:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -90,11 +79,9 @@
                 hreflang="tl"
                 href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/tags/tag1/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tl/tags/tag2/</loc>
-    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <lastmod>2022-05-13T18:08:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -105,11 +92,9 @@
                 hreflang="tl"
                 href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/tags/tag2/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tl/tags/</loc>
-    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <lastmod>2022-05-13T18:08:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -120,11 +105,9 @@
                 hreflang="tl"
                 href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/tags/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tl/categories/guide/</loc>
-    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <lastmod>2022-05-13T18:08:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -135,11 +118,9 @@
                 hreflang="tl"
                 href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/categories/guide/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tl/articles/rss-atom-and-json-feed-support/</loc>
-    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <lastmod>2022-05-13T18:08:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -150,11 +131,9 @@
                 hreflang="tl"
                 href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/articles/rss-atom-and-json-feed-support/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tl/tags/this-is-a-test-tag/</loc>
-    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <lastmod>2022-05-13T18:08:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -165,11 +144,9 @@
                 hreflang="tl"
                 href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/tags/this-is-a-test-tag/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tl/about/</loc>
-    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <lastmod>2022-05-13T18:08:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -180,11 +157,9 @@
                 hreflang="tl"
                 href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/about/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://foo-dogsquared.github.io/hugo-theme-contentful/tl/archives/</loc>
-    <lastmod>2020-05-12T16:40:21+08:00</lastmod>
+    <lastmod>2022-05-13T18:08:06+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -196,5 +171,4 @@
                 href="https://foo-dogsquared.github.io/hugo-theme-contentful/tl/archives/"
                 />
   </url>
-  
 </urlset>

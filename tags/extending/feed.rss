@@ -4,7 +4,7 @@
     <title>extending on Contentful</title>
     <link>https://foo-dogsquared.github.io/hugo-theme-contentful/tags/extending/</link>
     <description>Recent content in extending on Contentful</description>
-    <generator>Hugo v0.76.0 -- gohugo.io</generator><language>en-us</language><copyright>© 2021 to the author(s) behind Contentful</copyright>
+    <generator>Hugo v0.98.0 -- gohugo.io</generator><language>en-us</language><copyright>© 2022 to the author(s) behind Contentful</copyright>
         <lastBuildDate>Tue, 12 May 2020 17:25:55 +0800</lastBuildDate>
     <docs>https://www.rssboard.org/rss-2-0-1</docs>
         <atom:link href="https://foo-dogsquared.github.io/hugo-theme-contentful/tags/extending/feed.rss" rel="self" type="application/rss+xml" />
@@ -17,6 +17,16 @@
 
       <pubDate>Tue, 12 May 2020 17:25:55 +0800</pubDate>
       <guid>https://foo-dogsquared.github.io/hugo-theme-contentful/recipes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Extending Contentful</title>
+      <link>https://foo-dogsquared.github.io/hugo-theme-contentful/articles/extending-contentful/</link>
+      <category>theme</category>
+      <category>extending</category>
+
+      <pubDate>Tue, 12 May 2020 17:25:55 +0800</pubDate>
+      <guid>https://foo-dogsquared.github.io/hugo-theme-contentful/articles/extending-contentful/</guid>
       <description></description>
     </item>
   </channel>

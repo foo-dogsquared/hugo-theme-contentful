@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-us"><title>MathJax Support for Asciidoctor</title>
-<link rel="stylesheet" href="https://foo-dogsquared.github.io/hugo-theme-contentful/css/main.min.ac4668a81007ca38fcac8e88436ad4fa6a969ee4ce9352f52f795abf04e1624a.css" /><meta name="generator" content="Hugo 0.76.0" />
+<link rel="stylesheet" href="https://foo-dogsquared.github.io/hugo-theme-contentful/css/index.min.11618edd7e3b000c8d9629ad7f78c9229d907cb12f420c0242dfb9185eb5ff8e.css" /><meta name="generator" content="Hugo 0.98.0" />
 <meta charset="utf-8">
-<meta name="author" content="" />
+<meta name="author" content="John Doe" />
+
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="referrer" content="no-referrer" />
 <meta name="description" content="This is just an article for testing MathJax in Asciidoctor files.
@@ -23,17 +24,21 @@
  The following block content should contain a sentence with the LaTeX symbol.
  \[\LaTeX\text{ is awesome.}\]   Whitespace LaTeX treats whitespace characters such as tabs and spaces uniformly as one unit of space." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://foo-dogsquared.github.io/hugo-theme-contentful/articles/mathjax-support-for-asciidoctor/" />
+<meta property="og:url" content="https://foo-dogsquared.github.io/hugo-theme-contentful/articles/mathjax-support-for-asciidoctor/" /><meta property="article:section" content="articles" />
 <meta property="article:published_time" content="2019-08-28T01:47:02+08:00" />
-<meta property="article:modified_time" content="2020-05-12T16:40:21+08:00" />
-<link rel="canonical" type="text/html" href="https://foo-dogsquared.github.io/hugo-theme-contentful/articles/mathjax-support-for-asciidoctor/" />
+<meta property="article:modified_time" content="2022-05-13T18:08:06+08:00" />
+
+<meta itemprop="name" content="MathJax Support for Asciidoctor">
+<meta itemprop="description" content="This is just an article for testing MathJax in Asciidoctor files.
+ You can use this as a testing template for all of your LaTeX math needs.
+   Basics This should be an inline math content \(\LaTeX\) with the LaTeX symbol.
+ The following block content should contain a sentence with the LaTeX symbol.
+ \[\LaTeX\text{ is awesome.}\]   Whitespace LaTeX treats whitespace characters such as tabs and spaces uniformly as one unit of space."><meta itemprop="datePublished" content="2019-08-28T01:47:02+08:00" />
+<meta itemprop="dateModified" content="2022-05-13T18:08:06+08:00" />
+<meta itemprop="wordCount" content="1010">
+<meta itemprop="keywords" content="asciidoctor,mathjax,guide," /><link rel="canonical" type="text/html" href="https://foo-dogsquared.github.io/hugo-theme-contentful/articles/mathjax-support-for-asciidoctor/" />
     
-    <script>
-    const theme = window.localStorage.getItem('theme'); 
-    if (theme) {
-        document.documentElement.dataset.theme = theme;
-    }
-</script>
+    
 <body><nav aria-label="Primary navigation">
     <a class="site__title" href="https://foo-dogsquared.github.io/hugo-theme-contentful/">Contentful</a>
     <div class="site__links">
@@ -44,11 +49,6 @@
         <a href="https://foo-dogsquared.github.io/hugo-theme-contentful/tags/">Tags</a> |
         
     </div>
-    <button class="site__theme-btn" aria-label="theme-toggle" onclick="const theme = window.localStorage.getItem('theme') == 'dark' ? 'light' : 'dark'; window.localStorage.setItem('theme', theme); document.documentElement.dataset.theme = theme">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm2 0c0-5.514 4.486-10 10-10v20c-5.514 0-10-4.486-10-10z"></path>
-        </svg>
-    </button>
 </nav>
 
 
@@ -56,60 +56,21 @@
     <header>
         <h1>MathJax Support for Asciidoctor</h1>
     </header>
-    <div class="post__meta">
+    <div class="post__meta--single">
         
 
         
         <p data-content-publication-date="2019-08-28 01:47:02 &#43;0800 &#43;0800">Created: <time datetime="2019-08-28">2019-08-28</time></p>
-    
+
         
-        <p data-content-modification-date="2020-05-12 16:40:21 &#43;0800 &#43;0800">Updated: <time datetime="2020-05-12">2020-05-12</time></p>
-    
-        
+        <p data-content-modification-date="2022-05-13 18:08:06 &#43;0800 &#43;0800">Updated: <time datetime="2022-05-13">2022-05-13</time></p>
+
+       
     </div>
     <hr>
 
     
     
-    <style>
-    #TableOfContents:not(:empty)::before {
-      content: "Table of contents";
-      font-weight: bold;
-    }
-    </style>
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#_basics">Basics</a>
-      <ul>
-        <li><a href="#_whitespace">Whitespace</a></li>
-        <li><a href="#_commands">Commands</a></li>
-        <li><a href="#_reserved_characters">Reserved characters</a></li>
-      </ul>
-    </li>
-    <li><a href="#_text_formatting">Text formatting</a>
-      <ul>
-        <li><a href="#_literal_text">Literal text</a></li>
-        <li><a href="#_boldface_text">Boldface text</a></li>
-        <li><a href="#_italic_text">Italic text</a></li>
-        <li><a href="#_monospaced_text">Monospaced text</a></li>
-        <li><a href="#_text_in_sans_serif_font_equivalent">Text in sans-serif font equivalent</a></li>
-        <li><a href="#_more_options">More options</a></li>
-      </ul>
-    </li>
-    <li><a href="#_math_formatting">Math formatting</a>
-      <ul>
-        <li><a href="#_fractions">Fractions</a></li>
-        <li><a href="#_roots">Roots</a></li>
-        <li><a href="#_superscripts">Superscripts</a></li>
-        <li><a href="#_subscripts">Subscripts</a></li>
-        <li><a href="#_greek_letters">Greek letters</a></li>
-        <li><a href="#_mathematical_sizing">Mathematical sizing</a></li>
-        <li><a href="#_a_lot_more">A lot more!</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-
 
     <main>
     
@@ -590,6 +551,6 @@ can be used as a general MathJax guide, anyways.</p>
 
 
 
-<p>© 2021 Contentful</p>
+<p>© 2022 Contentful</p>
 </body>
 </html>
