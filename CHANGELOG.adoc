@@ -7,6 +7,15 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 
 
+== Unreleased
+
+=== Changed
+
+* Update the terms page.
+
+
+
+
 == [2.2.0] - 2020-11-06
 
 
