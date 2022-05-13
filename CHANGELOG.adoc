@@ -21,6 +21,8 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 * Move the example site into the project for easier testing and development.
 
+* Migrate from Travis CI to GitHub Actions.
+
 
 === Removed
 
