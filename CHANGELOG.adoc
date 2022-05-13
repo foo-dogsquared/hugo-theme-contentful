@@ -9,6 +9,12 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 == Unreleased
 
+
+=== Added
+
+* Add a development environment with link:https://nixos.org/[Nix package manager].
+
+
 === Changed
 
 * Update the terms page.
